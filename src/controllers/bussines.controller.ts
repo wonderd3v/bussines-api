@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import Bussines, { IBussiness } from "models/bussines.model";
+import Bussines, { IBussiness } from "../models/bussines.model";
 
 // CRUD OPERATIONS
-const getAll = async (res: Response): Promise<Response> => {
+const getAll = async (req:Request, res: Response): Promise<Response> => {
     const bussines = await Bussines.find();
-    if (!bussines)
+    if (bussines.length <= 0)
         return res.status(204).json('El registro no existe');
     
     return res.status(200).json(bussines);
@@ -52,7 +52,7 @@ const deletee = async (req: Request, res: Response): Promise<Response> => {
     return res.status(204).json('registro eliminado');
 }
 
-export {
+export default {
     getAll,
     getById,
     create,

@@ -17,7 +17,7 @@ const bussinesSchema = new Schema({
         lowercase: true
     },
     typeOfBussiness: {
-        
+        type: String,
     },
     photo: {
         type: String
