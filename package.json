@@ -8,7 +8,7 @@
     "dev": "nodemon",
     "build": "tsc --build",
     "clean": "rm -rf build",
-    "start": "node dist/"
+    "start": "ts-node src/index.ts"
   },
   "author": "",
   "license": "MIT",
