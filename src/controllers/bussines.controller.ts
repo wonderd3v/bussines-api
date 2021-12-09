@@ -18,6 +18,7 @@ const getById = async (req: Request, res: Response): Promise<Response> => {
     return res.status(200).json(bussinesFound);
 }
 
+
 const create = async (req: Request, res: Response): Promise<Response> => {
     const newBussines = new Bussines({
         name: req.body.name,

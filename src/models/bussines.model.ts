@@ -8,6 +8,7 @@ export interface IBussiness {
     latitude: number;
     longitude: number;
     address: string;
+    phoneNumber: string;
 }
 
 const bussinesSchema = new Schema({
@@ -34,7 +35,10 @@ const bussinesSchema = new Schema({
         type: Number,
         required: true,
         lowercase: true
-    } 
+    },
+    phoneNumber: {
+        type: String,
+    }
 })
 
 export default model<IBussiness>('Bussines', bussinesSchema);
