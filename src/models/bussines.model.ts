@@ -30,7 +30,7 @@ const bussinesSchema = new Schema({
         required: true
     },
     address: {
-        type: Number,
+        type: String,
         required: true,
         lowercase: true
     },

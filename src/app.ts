@@ -20,15 +20,7 @@ app.set('port', process.env.PORT);
 // Middleawaeres
 app.use(cors());
 app.use(express.json());
-
-
-// //Swagger middleware
-// import swaggerOptions from "./config/swagger";
-// const swaggerUi = require('swagger-ui-express');
-// const swagerJsDocs = require('swagger-jsdoc');
-// const swaggerDocs = swagerJsDocs(swaggerOptions);
-
-// app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOptions));
+app.use(morgan('dev'));
 
 // Routes
 import bussinesRoutes from "./routes/bussines.routes";
