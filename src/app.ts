@@ -20,7 +20,7 @@ app.set('port', process.env.PORT);
 // Middleawaeres
 app.use(cors());
 app.use(express.json());
-app.use(morgan('dev'));
+
 
 // Routes
 import bussinesRoutes from "./routes/bussines.routes";
