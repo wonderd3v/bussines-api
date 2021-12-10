@@ -1,9 +1,7 @@
-import { TypeOfBussiness } from "core/enums";
 import { Schema, model } from 'mongoose';
-
 export interface IBussiness {
     name: string;
-    typeOfBussiness: TypeOfBussiness;
+    typeOfBussiness: string;
     photo: string;
     latitude: number;
     longitude: number;
@@ -39,6 +37,6 @@ const bussinesSchema = new Schema({
     phoneNumber: {
         type: String,
     }
-})
+});
 
 export default model<IBussiness>('Bussines', bussinesSchema);
